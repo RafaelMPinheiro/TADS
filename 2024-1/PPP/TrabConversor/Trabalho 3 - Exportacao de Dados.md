@@ -1,0 +1,5 @@
+- [x] Ler arquivo csv
+- [ ] Formatar os dados
+- [ ] Exportar os dados em três formas de arquivos
+	- Ex: Texto Plano, Banco de Dados, PDF, HTML, XML,  Planilha Eletrônica, Latex, SQL
+	- Selecione no mínimo 4 formatos
