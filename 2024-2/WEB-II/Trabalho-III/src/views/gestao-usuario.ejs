@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão de Usuários</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-zinc-900 text-white flex items-center justify-center min-h-screen"
+  >
+    <div class="w-full max-w-5xl">
+      <div class="bg-zinc-800 shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
+        <h1 class="text-4xl font-bold mb-6 text-center">Gestão de Usuários</h1>
+
+        <div class="overflow-x-auto">
+          <table
+            class="min-w-full table-auto text-sm text-left border-separate border-spacing-0"
+          >
+            <thead class="bg-zinc-700 text-zinc-300 uppercase">
+              <tr>
+                <th class="p-3 text-center">Avatar</th>
+                <th class="p-3">ID</th>
+                <th class="p-3">Nome</th>
+                <th class="p-3">Email</th>
+                <th class="p-3">Role</th>
+                <th class="p-3">Permissões</th>
+                <th class="p-3">Ações</th>
+              </tr>
+            </thead>
+            <tbody class="text-zinc-400">
+              <% users.forEach(user => { %>
+              <tr
+                class="border-b border-zinc-600 hover:bg-zinc-700 transition-colors"
+              >
+                <td class="p-3 text-center">
+                  <img
+                    src="<%= user.avatar %>"
+                    alt="<%= user.name %>"
+                    class="w-12 h-12 rounded-full mx-auto"
+                  />
+                </td>
+                <td class="p-3 whitespace-nowrap"><%= user.id %></td>
+                <td class="p-3"><%= user.name %></td>
+                <td class="p-3"><%= user.email %></td>
+                <td class="p-3"><%= user.role %></td>
+                <td class="p-3">
+                  <% user.modules.forEach(module => { %>
+                  <span
+                    class="block bg-zinc-700 text-zinc-300 py-1 px-2 rounded-lg text-xs font-medium mb-1"
+                  >
+                    <%= module.name %>
+                  </span>
+                  <% }); %>
+                </td>
+                <td class="p-3">
+                  <% if (userSession.role === "Super Usuário") { %>
+                  <a
+                    href="/gestaoModulos/<%= user.id %>"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
+                  >
+                    Editar Permissões
+                  </a>
+                  <% } else if (user.role === "Usuário") { %>
+                  <a
+                    href="/gestaoModulos/<%= user.id %>"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
+                  >
+                    Editar Permissões
+                  </a>
+                  <% } %>
+                </td>
+              </tr>
+
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 flex justify-between">
+          <a
+            href="/home"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg"
+          >
+            Voltar ao Home
+          </a>
+          <a
+            href="/registrarUsuario"
+            class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg"
+          >
+            Registrar novo usuário
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
