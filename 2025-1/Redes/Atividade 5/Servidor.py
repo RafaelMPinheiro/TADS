@@ -47,14 +47,16 @@ class Partida:
 		self.enviar_para_todos(f"\n🎯 {jogador.nome.upper()}, é sua vez!\n")
 		self.enviar_para_todos(f"📢 Pergunta: {pergunta}\n")
 
-		if self.contador < 2:
-			jogador.enviar("✍️ Digite a resposta ou 'passar': ")
+		if self.contador == 0:
+			jogador.enviar("✍️ Digite a resposta (v/f) ou 'passa': ")
+		elif self.contador == 1:
+			jogador.enviar("✍️ Digite a resposta (v/f) ou 'repassa': ")
 		else:
-			jogador.enviar("✍️ Digite a resposta (você não pode passar): ")
+			jogador.enviar("✍️ Adversário repassou a pergunta você deve responder (v/f): ")
 
 		resposta = jogador.receber()
 
-		if self.contador < 2 and resposta == "passar":
+		if self.contador < 2 and (resposta == 'passa' or resposta == 'repassa'):
 			self.enviar_para_todos(f"\n🔁 {jogador.nome} passou a vez.")
 			proximo_jogador = self.jogadores[1 - self.jogadores.index(jogador)]
 			self.contador += 1
@@ -103,6 +105,19 @@ class ServidorJogo:
 		self.socket.bind((self.host, self.porta))
 		self.socket.listen(2)
 		print(f"Servidor iniciado em {self.host}:{self.porta}")
+		self.aguardar_jogadores()
+		self.iniciar_partida()
+
+	def reiniciar(self):
+		for jogador in self.jogadores:
+			jogador.enviar("Deseja sair do jogo? (s/n): ")
+			resposta = jogador.receber()
+			if resposta.lower() == 's':
+				jogador.enviar("👋 Até logo!")
+				jogador.fechar()
+			else:
+				jogador.enviar("Esperando outros jogadores...\n")
+				jogador.pontos = 0
 		self.aguardar_jogadores()
 		self.iniciar_partida()
 
