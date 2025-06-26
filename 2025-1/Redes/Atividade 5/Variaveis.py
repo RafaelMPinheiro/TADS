@@ -13,7 +13,7 @@ def get_ip():
 
 # Variaveis para conexao do servidor e cliente
 HOST = get_ip()
-PORT = 10000
+PORT = 12345
 
 PERGUNTAS = [
     ("Brasília é a capital do Brasil.", 'v'),

@@ -62,8 +62,11 @@ class Partida:
 			self.contador += 1
 			self.lidar_com_pergunta(proximo_jogador, pergunta, resposta_correta)
 			return
-
-		if resposta == resposta_correta:
+		
+		if resposta == 'fim':
+			jogador.enviar("👋 Jogo encerrado por você.")
+			jogador.pontos = 30
+		elif resposta == resposta_correta:
 			pontos = self.pontos_acerto[self.contador]
 			self.enviar_para_todos(f"\n✅ {jogador.nome} acertou! [+{pontos} pontos]")
 			jogador.pontos += pontos
@@ -77,7 +80,9 @@ class Partida:
 			jogador.enviar(msg)
 
 	def iniciar(self):
-		while (self.jogadores[0].pontos < 30 and self.jogadores[1].pontos < 30) or len(self.perguntas) > 0:
+		while True:
+			if self.jogadores[0].pontos >= 30 or self.jogadores[1].pontos >= 30 or len(self.perguntas) == 0:
+				break
 			self.enviar_para_todos("\n📊 PLACAR ATUAL:")
 			for jogador in self.jogadores:
 				self.enviar_para_todos(f"\n\n{jogador.nome}: {jogador.pontos} pontos")
@@ -107,19 +112,21 @@ class ServidorJogo:
 		print(f"Servidor iniciado em {self.host}:{self.porta}")
 		self.aguardar_jogadores()
 		self.iniciar_partida()
+		self.reiniciar()
 
 	def reiniciar(self):
-		for jogador in self.jogadores:
-			jogador.enviar("Deseja sair do jogo? (s/n): ")
-			resposta = jogador.receber()
-			if resposta.lower() == 's':
-				jogador.enviar("👋 Até logo!")
-				jogador.fechar()
-			else:
-				jogador.enviar("Esperando outros jogadores...\n")
-				jogador.pontos = 0
-		self.aguardar_jogadores()
-		self.iniciar_partida()
+		while True:
+			for jogador in self.jogadores:
+				jogador.enviar("Deseja sair do jogo? (s/n): ")
+				resposta = jogador.receber()
+				if resposta.lower() == 's':
+					jogador.enviar("👋 Até logo!")
+					jogador.fechar()
+				else:
+					jogador.enviar("Esperando outros jogadores...\n")
+					jogador.pontos = 0
+			self.aguardar_jogadores()
+			self.iniciar_partida()
 
 	def aguardar_jogadores(self):
 		print("🕹️ Aguardando 2 jogadores se conectarem...\n")
