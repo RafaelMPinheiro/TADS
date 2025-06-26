@@ -1,19 +1,19 @@
 import socket
 
-def get_ip():
+def obtem_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         s.connect(("8.8.8.8", 80))
         ip = s.getsockname()[0]
     except Exception:
-        print("Não foi possível obter o IP")
+        ip = "127.0.0.1"
     finally:
         s.close()
     return ip
 
 # Variaveis para conexao do servidor e cliente
-HOST = get_ip()
-PORT = 12345
+HOST = obtem_ip()
+PORT = 21311
 
 PERGUNTAS = [
     ("Brasília é a capital do Brasil.", 'v'),
