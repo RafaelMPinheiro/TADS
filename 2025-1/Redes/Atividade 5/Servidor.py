@@ -145,7 +145,5 @@ class ServidorJogo:
 		partida = Partida(self.jogadores)
 		partida.iniciar()
 
-
-if __name__ == "__main__":
-	servidor = ServidorJogo()
-	servidor.iniciar()
+servidor = ServidorJogo()
+servidor.iniciar()
