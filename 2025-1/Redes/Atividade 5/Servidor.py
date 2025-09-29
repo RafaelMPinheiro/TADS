@@ -47,12 +47,13 @@ class Partida:
 		self.enviar_para_todos(f"\n🎯 {jogador.nome.upper()}, é sua vez!\n")
 		self.enviar_para_todos(f"📢 Pergunta: {pergunta}\n")
 
+		# Sempre envia ⏳ antes de esperar resposta
 		if self.contador == 0:
-			jogador.enviar("✍️ Digite a resposta (v/f) ou 'passa': ")
+			jogador.enviar("⏳ Digite a resposta (v/f) ou 'passa'")
 		elif self.contador == 1:
-			jogador.enviar("✍️ Digite a resposta (v/f) ou 'repassa': ")
+			jogador.enviar("⏳ Digite a resposta (v/f) ou 'repassa'")
 		else:
-			jogador.enviar("✍️ Adversário repassou a pergunta você deve responder (v/f): ")
+			jogador.enviar("⏳ Adversário repassou a pergunta, agora você deve responder (v/f)")
 
 		resposta = jogador.receber()
 
@@ -116,23 +117,28 @@ class ServidorJogo:
 
 	def reiniciar(self):
 		while True:
+			jogadores_ativos = []
 			for jogador in self.jogadores:
-				jogador.enviar("Deseja sair do jogo? (s/n): ")
+				jogador.enviar("⏳ Deseja jogar novamente? (s/n)")
 				resposta = jogador.receber()
-				if resposta.lower() == 's':
+				if resposta == 's':
+					jogador.pontos = 0
+					jogadores_ativos.append(jogador)
+				else:
 					jogador.enviar("👋 Até logo!")
 					jogador.fechar()
-				else:
-					jogador.enviar("Esperando outros jogadores...\n")
-					jogador.pontos = 0
-			self.aguardar_jogadores()
+
+			self.jogadores = jogadores_ativos
+
+			if len(self.jogadores) < 2:
+				self.aguardar_jogadores()
 			self.iniciar_partida()
 
 	def aguardar_jogadores(self):
-		print("🕹️ Aguardando 2 jogadores se conectarem...\n")
+		print("🕹️ Aguardando jogadores...\n")
 		while len(self.jogadores) < 2:
 			conexao, endereco = self.socket.accept()
-			conexao.sendall("👤 Informe seu nome: ".encode())
+			conexao.sendall("⏳ Informe seu nome: ".encode())
 			nome = conexao.recv(1024).decode().strip()
 			jogador = ConexaoJogador(conexao, endereco, len(self.jogadores), nome)
 			jogador.enviar(f"\n👋 Olá {jogador.nome}!\nAguardando os outros jogadores...\n")
