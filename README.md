@@ -6,7 +6,9 @@ Repositório com as atividades práticas, trabalhos e módulos de estudo desenvo
 
 ## Sobre o Repositório
 
-Este repositório reúne o histórico de código e o aprendizado prático consolidado ao longo da graduação em **Tecnologia em Análise e Desenvolvimento de Sistemas** pelo **Instituto Federal do Rio Grande do Sul (IFRS — Campus Rio Grande)**.
+Este repositório reúne o histórico de código e o aprendizado prático consolidado ao longo da graduação no **Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas** pelo **Instituto Federal do Rio Grande do Sul (IFRS — Campus Rio Grande)**.
+
+O curso possui carga horária total de **2.147 horas** distribuídas ao longo de 6 semestres (3 anos), contemplando 2.015 horas de aulas presenciais, 66 horas de Trabalho de Conclusão de Curso (TCC) e 66 horas de Atividades Curriculares Complementares (ACC), conforme o Projeto Pedagógico do Curso (**PPC 2022**).
 
 O material aqui contido funciona como um **portfólio acadêmico**, documentando a evolução técnica desde os fundamentos de lógica e estruturas de dados em baixo nível até a aplicação de padrões de projeto (GoF), boas práticas de arquitetura de software, persistência com múltiplos modelos de banco de dados (relacionais e NoSQL) e desenvolvimento full stack (web e mobile).
 
@@ -18,19 +20,19 @@ O material aqui contido funciona como um **portfólio acadêmico**, documentando
 
 O repositório é organizado cronologicamente em pastas por período letivo (`AAAA-S`), subdivididas de acordo com as disciplinas da matriz curricular:
 
-| Semestre | Pasta / Disciplina | Descrição e Conteúdo Confirmado | Tecnologias Principais |
-| :--- | :--- | :--- | :--- |
-| **2024-1** | `Estrutura de dados` | Implementação de estruturas de dados clássicas (listas encadeadas, pilhas, filas, árvores), alocação dinâmica de memória, aritmética de ponteiros e algoritmos de busca e ordenação. | C |
-| **2024-1** | `PPP` *(Princípios e Padrões de Projeto)* | Aplicação prática de Programação Orientada a Objetos e Padrões de Projeto GoF (Builder, Command, Proxy, Decorator, State, Observer, Iterator, Prototype, Strategy), além de manipulação de planilhas e relatórios. | Java 17, Maven, Apache POI, PDFBox |
-| **2024-1** | `PBD` *(Programação em Banco de Dados)* | Modelagem de dados relacionais, criação de scripts DDL/DML, elaboração de consultas relacionais, triggers, procedimentos e integridade de dados. | SQL (PostgreSQL / MySQL) |
-| **2024-1** | `WEB1` *(Desenvolvimento Web I)* | Fundamentos de desenvolvimento para web, abrangendo estruturação de páginas, processamento no lado do servidor e manipulação de formulários. | PHP, HTML, CSS |
-| **2024-2** | `WEB-II` & `tads-webii-2024-2` *(Desenvolvimento Web II)* | Construção de aplicações web e APIs RESTful, renderização dinâmica com templates, autenticação baseada em tokens (JWT) com criptografia (bcrypt), modelagem e persistência com ORM e arquitetura MVC. | Node.js, Express, Prisma ORM, EJS, SQLite, PostgreSQL |
-| **2025-1** | `Redes` *(Redes de Computadores)* | Comunicação em rede cliente-servidor utilizando sockets TCP e UDP (incluindo aplicação interativa distribuída) e simulação de topologias e protocolos de rede. | Python (Sockets), Cisco Packet Tracer |
-| **2025-1** | `PPA` *(Princípios e Padrões de Arquitetura)* | Estrutura inicial voltada ao estudo e aplicação de princípios de arquitetura de software corporativo. | Configurações de ambiente |
-| **2025-2** | `CC` *(Tópicos em Ciência da Computação)* | Algoritmos com processamento paralelo e concorrente em CPU (`multiprocessing`), resolução por força bruta e análise exploratória de dados censitários e demográficos. | Python, Pandas, NumPy, Matplotlib, Seaborn |
-| **2025-2** | `apps` *(Tópicos em Desenv. de Aplicativos)* | Desenvolvimento de aplicativos mobile multiplataforma, abordando componentização, navegação em abas e pilhas, gerenciamento de estado global (Context API), tipagem e consumo de serviços externos. | React Native, TypeScript, Expo Router |
-| **2025-2** | `sistemas` *(Tópicos em Desenv. de Sistemas)* | Implementação de algoritmos de busca recursiva e técnicas de exploração do espaço de estados (*backtracking*). | JavaScript |
-| **2025-2** | `tbd` *(Tópicos em Banco de Dados)* | Persistência avançada e ecossistema NoSQL em Java: mapeamento objeto-relacional com JPA / Hibernate e consultas JPQL, Spring Data, bancos chave-valor em memória (Redis/Jedis), orientados a documentos (MongoDB) e em grafos (Neo4j), com ambientes conteinerizados. | Java 17, Maven, Spring Data, JPA, MongoDB, Neo4j, Redis, Docker Compose |
+| Semestre | Pasta / Componente Curricular | Nome Oficial no PPC (2022) | Descrição e Conteúdo Confirmado | Tecnologias Principais |
+| :--- | :--- | :--- | :--- | :--- |
+| **2024-1** | `Estrutura de dados` | **Estruturas de Dados** *(4º Sem.)* | Implementação de estruturas de dados clássicas (listas encadeadas, pilhas, filas, árvores), alocação dinâmica de memória, aritmética de ponteiros e algoritmos de busca e ordenação. | C |
+| **2024-1** | `PPP` | **Princípios e Padrões de Projeto** *(4º Sem.)* | Aplicação prática de Programação Orientada a Objetos e Padrões de Projeto GoF (Builder, Command, Proxy, Decorator, State, Observer, Iterator, Prototype, Strategy), além de manipulação de planilhas e relatórios. | Java 17, Maven, Apache POI, PDFBox |
+| **2024-1** | `PBD` | **Programação em Bancos de Dados** *(4º Sem.)* | Modelagem de dados relacionais, criação de scripts DDL/DML, elaboração de consultas relacionais, triggers, procedimentos e integridade de dados. | SQL (PostgreSQL / MySQL) |
+| **2024-1** | `WEB1` | **Desenvolvimento de Aplicativos Web I** *(4º Sem.)* | Fundamentos de desenvolvimento para web, abrangendo estruturação de páginas, processamento no lado do servidor e manipulação de formulários. | PHP, HTML, CSS |
+| **2024-2** | `WEB-II` & `tads-webii-2024-2` | **Desenvolvimento de Aplicativos Web II** *(5º Sem.)* | Construção de aplicações web e APIs RESTful, renderização dinâmica com templates, autenticação baseada em tokens (JWT) com criptografia (bcrypt), modelagem e persistência com ORM e arquitetura MVC. | Node.js, Express, Prisma ORM, EJS, SQLite, PostgreSQL |
+| **2025-1** | `Redes` | **Redes de Computadores** *(5º Sem.)* | Comunicação em rede cliente-servidor utilizando sockets TCP e UDP (incluindo aplicação interativa distribuída) e simulação de topologias e protocolos de rede. | Python (Sockets), Cisco Packet Tracer |
+| **2025-1** | `PPA` | **Princípios e Padrões de Arquitetura** *(5º Sem.)* | Estrutura inicial voltada ao estudo e aplicação de princípios de arquitetura de software corporativo. | Configurações de ambiente |
+| **2025-2** | `CC` | **Tópicos em Ciência da Computação** *(6º Sem.)* | Algoritmos com processamento paralelo e concorrente em CPU (`multiprocessing`), resolução por força bruta e análise exploratória de dados censitários e demográficos. | Python, Pandas, NumPy, Matplotlib, Seaborn |
+| **2025-2** | `apps` | **Tópicos em Desenvolvimento de Aplicativos** *(6º Sem.)* | Desenvolvimento de aplicativos mobile multiplataforma, abordando componentização, navegação em abas e pilhas, gerenciamento de estado global (Context API), tipagem e consumo de serviços externos. | React Native, TypeScript, Expo Router |
+| **2025-2** | `sistemas` | **Tópicos em Desenvolvimento de Sistemas** *(6º Sem.)* | Implementação de algoritmos de busca recursiva e técnicas de exploração do espaço de estados (*backtracking*). | JavaScript |
+| **2025-2** | `tbd` | **Tópicos em Bancos de Dados** *(6º Sem.)* | Persistência avançada e ecossistema NoSQL em Java: mapeamento objeto-relacional com JPA / Hibernate e consultas JPQL, Spring Data, bancos chave-valor em memória (Redis/Jedis), orientados a documentos (MongoDB) e em grafos (Neo4j), com ambientes conteinerizados. | Java 17, Maven, Spring Data, JPA, MongoDB, Neo4j, Redis, Docker Compose |
 
 ---
 
