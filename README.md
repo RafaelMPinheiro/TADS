@@ -1,110 +1,62 @@
-# Portfólio Acadêmico — TADS (IFRS Campus Rio Grande)
+# Portfólio acadêmico: TADS (IFRS Campus Rio Grande)
 
-Repositório com as atividades práticas, trabalhos e módulos de estudo desenvolvidos por Rafael Pinheiro durante o curso superior de Tecnologia em Análise e Desenvolvimento de Sistemas no IFRS (Campus Rio Grande).
-
----
-
-## Sobre o Repositório
-
-Este repositório reúne o histórico de código e o aprendizado prático consolidado ao longo da graduação no **Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas** pelo **Instituto Federal do Rio Grande do Sul (IFRS — Campus Rio Grande)**.
-
-O curso possui carga horária total de **2.147 horas** distribuídas ao longo de 6 semestres (3 anos), contemplando 2.015 horas de aulas presenciais, 66 horas de Trabalho de Conclusão de Curso (TCC) e 66 horas de Atividades Curriculares Complementares (ACC), conforme o Projeto Pedagógico do Curso (**PPC 2022**).
-
-O material aqui contido funciona como um **portfólio acadêmico**, documentando a evolução técnica desde os fundamentos de lógica e estruturas de dados em baixo nível até a aplicação de padrões de projeto (GoF), boas práticas de arquitetura de software, persistência com múltiplos modelos de banco de dados (relacionais e NoSQL) e desenvolvimento full stack (web e mobile).
-
-> **Nota sobre a organização:** O repositório é composto por módulos didáticos, exercícios de fixação e trabalhos práticos organizados por semestre e disciplina, e não por projetos independentes únicos.
+Atividades práticas, exercícios e trabalhos desenvolvidos por Rafael Pinheiro no curso superior de Tecnologia em Análise e Desenvolvimento de Sistemas do IFRS (Campus Rio Grande).
 
 ---
 
-## Estrutura por Semestre e Disciplinas
+## Sobre o repositório
 
-O repositório é organizado cronologicamente em pastas por período letivo (`AAAA-S`), subdivididas de acordo com as disciplinas da matriz curricular:
+Este repositório reúne o código produzido durante a graduação no Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas do Instituto Federal do Rio Grande do Sul (IFRS, Campus Rio Grande).
 
-| Semestre | Pasta / Componente Curricular | Nome Oficial no PPC (2022) | Descrição e Conteúdo Confirmado | Tecnologias Principais |
+O curso tem carga horária total de 2.147 horas distribuídas em 6 semestres (3 anos): 2.015 horas de aulas presenciais, 66 horas de Trabalho de Conclusão de Curso (TCC) e 66 horas de Atividades Curriculares Complementares (ACC), segundo o Projeto Pedagógico do Curso (PPC 2022).
+
+O repositório é um portfólio acadêmico com foco prático. O código cobre desde estruturas de dados e ponteiros em C até padrões de projeto (GoF), bancos relacionais e NoSQL, APIs e desenvolvimento web e mobile.
+
+> **Organização:** os arquivos estão divididos por semestre e disciplina em módulos didáticos e exercícios. Não são projetos independentes.
+
+---
+
+## Estrutura por semestre e disciplinas
+
+As pastas estão organizadas por semestre letivo (`AAAA-S`) e disciplina:
+
+| Semestre | Pasta | Componente curricular (PPC 2022) | Conteúdo | Tecnologias |
 | :--- | :--- | :--- | :--- | :--- |
-| **2024-1** | `Estrutura de dados` | **Estruturas de Dados** *(4º Sem.)* | Implementação de estruturas de dados clássicas (listas encadeadas, pilhas, filas, árvores), alocação dinâmica de memória, aritmética de ponteiros e algoritmos de busca e ordenação. | C |
-| **2024-1** | `PPP` | **Princípios e Padrões de Projeto** *(4º Sem.)* | Aplicação prática de Programação Orientada a Objetos e Padrões de Projeto GoF (Builder, Command, Proxy, Decorator, State, Observer, Iterator, Prototype, Strategy), além de manipulação de planilhas e relatórios. | Java 17, Maven, Apache POI, PDFBox |
-| **2024-1** | `PBD` | **Programação em Bancos de Dados** *(4º Sem.)* | Modelagem de dados relacionais, criação de scripts DDL/DML, elaboração de consultas relacionais, triggers, procedimentos e integridade de dados. | SQL (PostgreSQL / MySQL) |
-| **2024-1** | `WEB1` | **Desenvolvimento de Aplicativos Web I** *(4º Sem.)* | Fundamentos de desenvolvimento para web, abrangendo estruturação de páginas, processamento no lado do servidor e manipulação de formulários. | PHP, HTML, CSS |
-| **2024-2** | `WEB-II` & `tads-webii-2024-2` | **Desenvolvimento de Aplicativos Web II** *(5º Sem.)* | Construção de aplicações web e APIs RESTful, renderização dinâmica com templates, autenticação baseada em tokens (JWT) com criptografia (bcrypt), modelagem e persistência com ORM e arquitetura MVC. | Node.js, Express, Prisma ORM, EJS, SQLite, PostgreSQL |
-| **2025-1** | `Redes` | **Redes de Computadores** *(5º Sem.)* | Comunicação em rede cliente-servidor utilizando sockets TCP e UDP (incluindo aplicação interativa distribuída) e simulação de topologias e protocolos de rede. | Python (Sockets), Cisco Packet Tracer |
-| **2025-1** | `PPA` | **Princípios e Padrões de Arquitetura** *(5º Sem.)* | Estrutura inicial voltada ao estudo e aplicação de princípios de arquitetura de software corporativo. | Configurações de ambiente |
-| **2025-2** | `CC` | **Tópicos em Ciência da Computação** *(6º Sem.)* | Algoritmos com processamento paralelo e concorrente em CPU (`multiprocessing`), resolução por força bruta e análise exploratória de dados censitários e demográficos. | Python, Pandas, NumPy, Matplotlib, Seaborn |
-| **2025-2** | `apps` | **Tópicos em Desenvolvimento de Aplicativos** *(6º Sem.)* | Desenvolvimento de aplicativos mobile multiplataforma, abordando componentização, navegação em abas e pilhas, gerenciamento de estado global (Context API), tipagem e consumo de serviços externos. | React Native, TypeScript, Expo Router |
-| **2025-2** | `sistemas` | **Tópicos em Desenvolvimento de Sistemas** *(6º Sem.)* | Implementação de algoritmos de busca recursiva e técnicas de exploração do espaço de estados (*backtracking*). | JavaScript |
-| **2025-2** | `tbd` | **Tópicos em Bancos de Dados** *(6º Sem.)* | Persistência avançada e ecossistema NoSQL em Java: mapeamento objeto-relacional com JPA / Hibernate e consultas JPQL, Spring Data, bancos chave-valor em memória (Redis/Jedis), orientados a documentos (MongoDB) e em grafos (Neo4j), com ambientes conteinerizados. | Java 17, Maven, Spring Data, JPA, MongoDB, Neo4j, Redis, Docker Compose |
+| **2024-1** | `Estrutura de dados` | Estruturas de Dados *(4º sem.)* | Listas encadeadas, pilhas, filas, árvores, alocação dinâmica de memória, ponteiros e algoritmos de ordenação e busca. | C |
+| **2024-1** | `PPP` | Princípios e Padrões de Projeto *(4º sem.)* | Programação orientada a objetos e padrões de projeto GoF (Builder, Command, Proxy, Decorator, State, Observer, Iterator, Prototype, Strategy), além de leitura de planilhas e geração de relatórios. | Java 17, Maven, Apache POI, PDFBox |
+| **2024-1** | `PBD` | Programação em Bancos de Dados *(4º sem.)* | Modelagem relacional, scripts DDL e DML, consultas, gatilhos, procedimentos e integridade referencial. | SQL (PostgreSQL, MySQL) |
+| **2024-1** | `WEB1` | Desenvolvimento de Aplicativos Web I *(4º sem.)* | Páginas dinâmicas, processamento no servidor e manipulação de formulários. | PHP, HTML, CSS |
+| **2024-2** | `WEB-II` e `tads-webii-2024-2` | Desenvolvimento de Aplicativos Web II *(5º sem.)* | APIs REST, autenticação com JWT e bcrypt, renderização no servidor com templates, ORM e arquitetura MVC. | Node.js, Express, Prisma ORM, EJS, SQLite, PostgreSQL |
+| **2025-1** | `Redes` | Redes de Computadores *(5º sem.)* | Comunicação cliente-servidor com sockets TCP e UDP, além de simulação de topologias de rede. | Python (sockets), Cisco Packet Tracer |
+| **2025-1** | `PPA` | Princípios e Padrões de Arquitetura *(5º sem.)* | Estrutura inicial para estudos de arquitetura de software corporativo. | Configurações de ambiente |
+| **2025-2** | `CC` | Tópicos em Ciência da Computação *(6º sem.)* | Processamento concorrente e paralelo com multiprocessing (força bruta para quebra de hashes) e análise exploratória de dados censitários. | Python, Pandas, NumPy, Matplotlib, Seaborn |
+| **2025-2** | `apps` | Tópicos em Desenvolvimento de Aplicativos *(6º sem.)* | Aplicativos móveis com navegação em abas e pilhas, gerenciamento de estado com Context API e consumo de APIs. | React Native, TypeScript, Expo Router |
+| **2025-2** | `sistemas` | Tópicos em Desenvolvimento de Sistemas *(6º sem.)* | Algoritmo de busca com retrocesso (backtracking) aplicado a jogo da velha. | JavaScript |
+| **2025-2** | `tbd` | Tópicos em Bancos de Dados *(6º sem.)* | Persistência com JPA e Hibernate, consultas JPQL, Spring Data, bancos chave-valor (Redis), orientados a documentos (MongoDB) e em grafos (Neo4j), com suporte a Docker Compose. | Java 17, Maven, Spring Data, JPA, MongoDB, Neo4j, Redis, Docker Compose |
 
 ---
 
-## Tecnologias e Conceitos Demonstrados
+## Tecnologias e conceitos
 
-O código presente no repositório evidencia domínio prático nos seguintes domínios:
+Principais tecnologias e conceitos aplicados nos módulos do repositório:
 
-- **Linguagens de Programação:** Java (17+), C, Python, JavaScript, TypeScript, SQL, PHP.
-- **Back-end & Persistência:**
-  - *Java:* JPA / Hibernate, Spring Data JPA, Drivers nativos para Redis (Jedis), MongoDB e Neo4j.
-  - *Node.js:* Express, Prisma ORM, EJS, JWT, bcrypt.
-  - *Banco de Dados:* PostgreSQL, MySQL, SQLite, MongoDB, Neo4j, Redis.
-- **Front-end & Mobile:** React Native, Expo Router, TypeScript, HTML5, CSS3.
-- **Ciência de Dados & Concorrência:** Python `multiprocessing`, Pandas, NumPy, Matplotlib, Seaborn.
-- **Engenharia de Software & Paradigmas:**
-  - Padrões de Projeto (Design Patterns GoF): Builder, Command, Proxy, Decorator, State, Observer, Iterator, Prototype, Strategy.
-  - Princípios SOLID e Programação Orientada a Objetos (POO).
-  - Arquitetura MVC, Camadas de Serviços/DAO e APIs RESTful.
-  - Estruturas de Dados fundamentais e Algoritmos de Ordenação/Busca.
-- **Infraestrutura & Ferramentas:** Apache Maven, Docker Compose, Git, Cisco Packet Tracer.
-
----
-
-## Como Executar
-
-Como este repositório é composto por diversos módulos independentes de estudo e trabalhos práticos, cada diretório contém sua respectiva configuração de compilação ou execução.
-
-### Módulos Java (Maven)
-Cada módulo acadêmico em Java possui seu próprio manifesto `pom.xml` (configurado para Java 17). Para compilar ou executar:
-
-1. Acesse o diretório do módulo desejado (por exemplo, em `2024-1/PPP/TrabCommand` ou `2025-2/tbd/tbd-trab-2/eventos`):
-   ```bash
-   cd 2024-1/PPP/TrabCommand
-   ```
-2. Compile o código com o Maven:
-   ```bash
-   mvn compile
-   ```
-3. Para executar uma classe específica contendo o método `main`, utilize sua IDE preferida ou o plugin exec do Maven:
-   ```bash
-   mvn exec:java -Dexec.mainClass="apresentacao.Main"
-   ```
-
-### Aplicações Node.js / React Native
-Os módulos em JavaScript e TypeScript contam com seus respectivos arquivos `package.json`:
-
-1. Acesse o diretório do trabalho (por exemplo, em `2025-2/apps/trabalho-1` ou `2024-2/WEB-II/Trabalho-I`):
-   ```bash
-   cd 2025-2/apps/trabalho-1
-   ```
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Execute o script indicado no `package.json` (por exemplo, `npm start` ou `npx expo start` para aplicações Expo):
-   ```bash
-   npx expo start
-   ```
-
-### Scripts em C e Python
-- **Programas em C:** podem ser compilados diretamente via GCC:
-  ```bash
-  gcc "2024-1/Estrutura de dados/Trabalho.c" -o trabalho && ./trabalho
-  ```
-- **Scripts em Python:** podem ser executados com o interpretador Python 3, instalando eventuais dependências listadas em arquivos de requisitos locais:
-  ```bash
-  python3 2025-2/CC/Trabalho-1/paralelo.py
-  ```
+- **Linguagens de programação:** Java (17+), C, Python, JavaScript, TypeScript, SQL, PHP.
+- **Back-end e bancos de dados:**
+  - Java: JPA, Hibernate, Spring Data JPA, drivers de Redis (Jedis), MongoDB e Neo4j.
+  - Node.js: Express, Prisma ORM, EJS, JWT, bcrypt.
+  - Bancos de dados: PostgreSQL, MySQL, SQLite, MongoDB, Neo4j, Redis.
+- **Front-end e mobile:** React Native, Expo Router, TypeScript, HTML5, CSS3.
+- **Ciência de dados e concorrência:** Python multiprocessing, Pandas, NumPy, Matplotlib, Seaborn.
+- **Padrões e arquitetura:**
+  - Padrões de projeto GoF (Builder, Command, Proxy, Decorator, State, Observer, Iterator, Prototype, Strategy).
+  - Princípios SOLID e orientação a objetos.
+  - Arquitetura MVC, camadas de serviço e DAO, APIs REST.
+  - Estruturas de dados e algoritmos de ordenação e busca.
+- **Ferramentas:** Apache Maven, Docker Compose, Git, Cisco Packet Tracer.
 
 ---
 
 ## Contato
 
-- **GitHub:** [https://github.com/RafaelMPinheiro](https://github.com/RafaelMPinheiro)
-- **LinkedIn:** [https://www.linkedin.com/in/rafaelmpinheiro/](https://www.linkedin.com/in/rafaelmpinheiro/)
+- GitHub: [https://github.com/RafaelMPinheiro](https://github.com/RafaelMPinheiro)
+- LinkedIn: [https://www.linkedin.com/in/rafaelmpinheiro/](https://www.linkedin.com/in/rafaelmpinheiro/)
