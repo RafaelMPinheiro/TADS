@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/banner.svg" alt="Banner ilustrativo com o título Portfólio TADS, o subtítulo Análise e Desenvolvimento de Sistemas, IFRS Campus Rio Grande, e quatro blocos de semestre de 2024-1 a 2025-2." width="100%">
+</p>
+
 # Portfólio acadêmico: TADS (IFRS Campus Rio Grande)
 
 Atividades práticas, exercícios e trabalhos desenvolvidos por Rafael Pinheiro no curso superior de Tecnologia em Análise e Desenvolvimento de Sistemas do IFRS (Campus Rio Grande).
@@ -20,6 +24,10 @@ O repositório é um portfólio acadêmico com foco prático. O código cobre de
 
 As pastas estão organizadas por semestre letivo (`AAAA-S`) e disciplina:
 
+![Diagrama da organização do repositório: quatro pastas de semestre em sequência (2024-1, 2024-2, 2025-1 e 2025-2), cada uma com suas disciplinas.](docs/assets/estrutura.svg)
+
+*Ilustração em SVG editável (`docs/assets/estrutura.svg`), não é captura de tela.*
+
 | Semestre | Pasta | Componente curricular (PPC 2022) | Conteúdo | Tecnologias |
 | :--- | :--- | :--- | :--- | :--- |
 | **2024-1** | `Estrutura de dados` | Estruturas de Dados *(4º sem.)* | Listas encadeadas, pilhas, filas, árvores, alocação dinâmica de memória, ponteiros e algoritmos de ordenação e busca. | C |
@@ -33,6 +41,8 @@ As pastas estão organizadas por semestre letivo (`AAAA-S`) e disciplina:
 | **2025-2** | `apps` | Tópicos em Desenvolvimento de Aplicativos *(6º sem.)* | Aplicativos móveis com navegação em abas e pilhas, gerenciamento de estado com Context API e consumo de APIs. | React Native, TypeScript, Expo Router |
 | **2025-2** | `sistemas` | Tópicos em Desenvolvimento de Sistemas *(6º sem.)* | Estrutura inicial para estudos de busca com retrocesso (backtracking); código ainda não desenvolvido. | JavaScript (estrutura inicial) |
 | **2025-2** | `tbd` | Tópicos em Bancos de Dados *(6º sem.)* | Persistência com JPA e Hibernate, consultas JPQL, Spring Data, bancos chave-valor (Redis), orientados a documentos (MongoDB) e em grafos (Neo4j), com suporte a Docker Compose. | Java 17, Maven, Spring Data, JPA, MongoDB, Neo4j, Redis, Docker Compose |
+
+> **Como executar:** não há um comando único para o repositório. Cada módulo tem seu próprio manifesto (por exemplo `pom.xml`, `package.json` ou `requirements.txt`, quando existe) e as instruções ficam no próprio módulo. _Instruções padronizadas de execução: a definir._
 
 ---
 
